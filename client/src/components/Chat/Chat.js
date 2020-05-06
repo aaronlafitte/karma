@@ -4,6 +4,7 @@ import io from "socket.io-client";
 
 import TextContainer from '../TextContainer/TextContainer';
 import Messages from '../Messages/Messages';
+import TestButton from '../TestButton/TestButton';
 import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
 
@@ -55,11 +56,9 @@ const Chat = ({ location }) => {
   return (
     <div className="outerContainer">
       <div className="container">
-        <InfoBar room={room} />
-        <Messages messages={messages} name={name} />
-        <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
+        <TextContainer users={users} />
+        <TestButton />
       </div>
-      <TextContainer users={users} />
     </div>
   );
 }
